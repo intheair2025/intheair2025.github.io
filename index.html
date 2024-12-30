@@ -6,18 +6,17 @@
     <title>loser</title>
     <style>
         body {
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100vh;
-background-color: #000000; /* Changed to black */
-font-family: 'Arial', Times, serif;
-color: #FFFFFF; /* Changed to white */
-margin: 0;
-position: relative;
-overflow: hidden;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #440339;
+            font-family: 'Arial', Times, serif;
+            color: #333;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
         }
         .container {
             text-align: center;
@@ -28,7 +27,7 @@ overflow: hidden;
             z-index: 2; /* Ensure container is above echo */
         }
         h1 {
-            font-size: 16px;
+            font-size: 24px;
         }
         input[type="text"] {
             width: 300px;
@@ -137,7 +136,8 @@ overflow: hidden;
         const waitingMessage = document.getElementById('waitingMessage');
 
 
-        inputBox.addEventListener('input', function() {
+
+                inputBox.addEventListener('input', function() {
             const input = this.value.trim().toLowerCase();
             if (input === "") {
                 responseDiv.innerText = ""; // Display blank output when nothing is typed
@@ -154,7 +154,7 @@ overflow: hidden;
                 const randomResponse = generateRandomStringFromHash(hash, 20); // Adjust the length as needed
                 responseDiv.innerText = randomResponse;
             }
-            updateKeyboard(input);
+                         updateKeyboard(input);
             echoInput(input);
         });
 
