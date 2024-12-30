@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loser</title>
+    <title>Adventure of a Lifetime</title>
     <style>
         body {
             display: flex;
@@ -12,7 +12,7 @@
             align-items: center;
             height: 100vh;
             background-color: #440339;
-            font-family: 'Arial', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             color: #333;
             margin: 0;
             position: relative;
@@ -40,7 +40,7 @@
         #response {
             margin-top: 20px;
             font-size: 18px;
-            font-family: 'Arial', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             background-color: #e0e0e0;
             padding: 10px;
             border: 2px solid #333;
@@ -64,7 +64,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Arial', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
             background-color: #e0e0e0;
             color: #000;
             cursor: pointer;
@@ -135,26 +135,27 @@
         const keyboardContainer = document.getElementById('keyboard');
         const waitingMessage = document.getElementById('waitingMessage');
 
+        window.onload = function() {
+            const randomNumber = generateRandomNumber(10000, 12000);
+            waitingMessage.innerText = `There are ${randomNumber} on this site, please be patient as there may be delayed loading times.`;
+        };
 
-
-                inputBox.addEventListener('input', function() {
+        inputBox.addEventListener('input', function() {
             const input = this.value.trim().toLowerCase();
             if (input === "") {
                 responseDiv.innerText = ""; // Display blank output when nothing is typed
-            } else if (input === "in the air") {
-                responseDiv.innerText = "feburary 14, 2025"; // Specific output for "in the air"
-            } else if (input === "dark fantasy") {
-                responseDiv.innerText = "previous; // Specific output for "dark fantasy"
-            } else if (input === "fucked up") {
-                responseDiv.innerText = "fuckedupgallery.blogspot.com"; // Specific output for "fucked up"
-            } else if (input === "darkness") {
-                responseDiv.innerText = "https://soundcloud.com/godineed"; // Specific output for "darkness"
+            } else if (input === "ambivalence") {
+                responseDiv.innerText = "NExT"; // Specific output for "ambivalence"
+            } else if (input === "museum music") {
+                responseDiv.innerText = "11111-2025-11111"; // Specific output for "museum music"
+            } else if (input === "#440439") {
+                responseDiv.innerText = "tinyurl .com / CEVTCYNFAFRGN"; // Specific output for "#440439"
             } else {
                 const hash = hashString(input);
                 const randomResponse = generateRandomStringFromHash(hash, 20); // Adjust the length as needed
                 responseDiv.innerText = randomResponse;
             }
-                         updateKeyboard(input);
+            updateKeyboard(input);
             echoInput(input);
         });
 
